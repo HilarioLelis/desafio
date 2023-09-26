@@ -24,6 +24,11 @@ nav {
     align-items: center;
 }
 
+.nav ul a:hover {
+    color: black;
+    transition: 1s;
+}
+
 span {
     display: flex;
     font-size: 48px;
@@ -85,10 +90,27 @@ button {
     padding: 15px;
     background-color: black;
     border-radius: 5px; 
+    cursor: pointer;
+    border: none;
 }
 .button2 {
-    
+    background-color: #8a2be2;
     margin-right: 20px;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: #8a2be2;
+    transition: 1s;
+}
+
+.button2:hover {
+    background-color: black;
+    transition: 1s;
+}
+
+iframe {
+    border: 5px solid #8a2be2 ;
 }
 
 .about {
@@ -120,30 +142,58 @@ button {
     text-shadow: 1px 2px 1px black;
 }
 
-.galeria div {
-    
+
+
+.galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 5vh auto;
-    max-height: 400px;
+    grid-template-areas: 
+    "diana alan alan jovirone"
+    "diana alan alan jovirone"
+    "diana casimiro nivi pato"
+    ;
+    margin: 5rem auto;
+    height: 85vh;
+    width: 100%;
+    
+}
+ 
+.img {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    height: 100%;
+    width: 100%;
 }
 
-.destack {
-     height: 100%;
+#diana {
+    background: url('../images/streamer-diana.jpg');
+    grid-area: diana;
 }
 
+#alanzoka {
+    background: url('../images/streamer-alanzoka.jpeg');
+    grid-area: alan;
+}
 
+#jovirone {
+    background: url('../images/streamer-jovirone.jpg');
+    grid-area: jovirone;
+}
 
+#casimiro {
+    background: url('../images/streamer-casimiro.jpg');
+    grid-area: casimiro;
+}
 
+#nivi {
+    background: url('../images/streamer-nivi.png');
+    grid-area: nivi;
+}
 
-
-
-
-
-
-
-
-
+#pato {
+    background: url('../images/streamer-pato.jpg');
+    grid-area: pato;
+}
 
 
 .container {
@@ -185,7 +235,7 @@ button {
     padding: 4px;
     border: none;
     border-radius: 0;
-    background-color: ;
+    background-color: #8a2be2;
 }
 
 .up {
@@ -195,12 +245,19 @@ button {
     bottom: 3%;
     cursor: pointer;
 }
+
 .redes {
     font-size: 13px;
     padding: 5vh;
     display: flex;
+    align-items: center;
     justify-content: center;
     text-align: center;
+    
+}
+
+.redes a {
+    margin: 0;
 }
 
 footer {
